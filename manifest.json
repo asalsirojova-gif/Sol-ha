@@ -1,0 +1,9 @@
+{
+  "name": "Bolajonlar — Qiziqarli ta'lim olami",
+  "short_name": "Bolajonlar",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fbf7f1",
+  "theme_color": "#f7c6d7",
+  "icons": []
+}

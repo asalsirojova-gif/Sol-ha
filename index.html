@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7efe5">
+  <title>Bolajonlar — Qiziqarli ta'lim olami</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-yarn">🧶</div>
+        <div>
+          <h1>Bolajonlar uchun</h1>
+          <p>Qiziqarli ta'lim olami</p>
+        </div>
+      </div>
+      <button class="sound-btn" id="soundBtn" aria-label="Ovoz">🔊</button>
+    </header>
+
+    <main>
+      <section id="home" class="screen active">
+        <div class="hero-card yarn-card">
+          <div>
+            <span class="eyebrow">O‘rganamiz va o‘ynaymiz</span>
+            <h2>Bugun nimani o‘rganamiz?</h2>
+            <p>Harflar, sonlar, ranglar, shakllar va yana ko‘p qiziqarli darslar.</p>
+          </div>
+          <div class="hero-toys"><span>🧶</span><span>🧸</span><span>📚</span></div>
+        </div>
+
+        <div class="section-title">
+          <h2>Darslar</h2>
+          <span>9 ta bo‘lim</span>
+        </div>
+
+        <div class="lesson-grid">
+          <button class="lesson-card pink" data-target="letters"><img src="assets/icons/letters.svg"><b>Harflar</b><small>O‘zbek alifbosi</small></button>
+          <button class="lesson-card blue" data-target="numbers"><img src="assets/icons/numbers.svg"><b>Sonlar</b><small>1 dan 10 gacha</small></button>
+          <button class="lesson-card yellow" data-target="colors"><img src="assets/icons/colors.svg"><b>Ranglar</b><small>Ranglarni tanish</small></button>
+          <button class="lesson-card mint" data-target="shapes"><img src="assets/icons/shapes.svg"><b>Shakllar</b><small>Geometrik shakllar</small></button>
+          <button class="lesson-card lavender" data-target="body"><img src="assets/icons/body.svg"><b>Tana a’zolari</b><small>O‘rganamiz</small></button>
+          <button class="lesson-card orange" data-target="time"><img src="assets/icons/time.svg"><b>Vaqt</b><small>Soatni o‘rganamiz</small></button>
+          <button class="lesson-card teal" data-target="animals"><img src="assets/icons/animals.svg"><b>Hayvonlar</b><small>Jonivorlar olami</small></button>
+          <button class="lesson-card peach" data-target="fruits"><img src="assets/icons/fruits.svg"><b>Mevalar</b><small>Mevalarni taniymiz</small></button>
+          <button class="lesson-card purple" data-target="quiz"><img src="assets/icons/quiz.svg"><b>Quiz</b><small>Bilimingni sinab ko‘r</small></button>
+        </div>
+      </section>
+
+      <section id="letters" class="screen">
+        <div class="screen-head"><button class="back">←</button><div><h2>🔤 O‘zbek alifbosi</h2><p>29 ta harfni o‘rganamiz</p></div></div>
+        <div class="progress"><span id="letterProgress"></span></div>
+        <div id="letterGrid" class="alphabet-grid"></div>
+        <div class="learn-panel yarn-card">
+          <div class="big-letter" id="bigLetter">A</div>
+          <div><h3 id="letterWord">A — Anor</h3><p>Harfni bosib ko‘ring 🔊</p></div>
+        </div>
+      </section>
+
+      <section id="numbers" class="screen">
+        <div class="screen-head"><button class="back">←</button><div><h2>🔢 Sonlar</h2><p>1 dan 10 gacha</p></div></div>
+        <div id="numberGrid" class="number-grid"></div>
+        <div class="learn-panel yarn-card"><div class="big-number" id="bigNumber">1</div><div><h3 id="numberWord">Bir</h3><p>Sonni bosib ko‘ring 🔊</p></div></div>
+      </section>
+
+      <section id="colors" class="screen">
+        <div class="screen-head"><button class="back">←</button><div><h2>🎨 Ranglar</h2><p>Ranglarni taniymiz</p></div></div>
+        <div id="colorGrid" class="color-grid"></div>
+      </section>
+
+      <section id="shapes" class="screen">
+        <div class="screen-head"><button class="back">←</button><div><h2>🔷 Geometrik shakllar</h2><p>Shakllarni taniymiz</p></div></div>
+        <div id="shapeGrid" class="shape-grid"></div>
+      </section>
+
+      <section id="body" class="screen">
+        <div class="screen-head"><button class="back">←</button><div><h2>🧒 Tana a’zolari</h2><p>So‘zlarni o‘rganamiz</p></div></div>
+        <div id="bodyGrid" class="body-grid"></div>
+      </section>
+
+      <section id="time" class="screen">
+        <div class="screen-head"><button class="back">←</button><div><h2>🕐 Vaqt</h2><p>Soatni o‘rganamiz</p></div></div>
+        <div class="clock-card yarn-card">
+          <div class="clock" id="clock"><div class="hand hour"></div><div class="hand minute"></div><div class="center-dot"></div>
+            <span class="n n12">12</span><span class="n n3">3</span><span class="n n6">6</span><span class="n n9">9</span>
+          </div>
+          <div><h3 id="clockText">Soat 03:00</h3><p>Soatni kuzatib, vaqtni ayting.</p></div>
+        </div>
+        <div class="time-buttons">
+          <button data-time="3:00">03:00</button><button data-time="6:30">06:30</button><button data-time="9:15">09:15</button><button data-time="12:45">12:45</button>
+        </div>
+      </section>
+
+      <section id="animals" class="screen">
+        <div class="screen-head"><button class="back">←</button><div><h2>🐾 Hayvonlar</h2><p>Jonivorlarni taniymiz</p></div></div>
+        <div id="animalGrid" class="word-grid"></div>
+      </section>
+
+      <section id="fruits" class="screen">
+        <div class="screen-head"><button class="back">←</button><div><h2>🍎 Mevalar</h2><p>Mevalarni taniymiz</p></div></div>
+        <div id="fruitGrid" class="word-grid"></div>
+      </section>
+
+      <section id="quiz" class="screen">
+        <div class="screen-head"><button class="back">←</button><div><h2>🧠 Quiz</h2><p>Bilimingni sinab ko‘r!</p></div></div>
+        <div class="quiz-card yarn-card">
+          <div class="quiz-top"><span id="quizCount">1 / 10</span><span id="score">⭐ 0</span></div>
+          <div class="quiz-icon" id="quizIcon">A</div>
+          <h3 id="quizQuestion">Qaysi harf?</h3>
+          <div id="quizAnswers" class="answers"></div>
+          <button id="nextQuiz" class="primary-btn" disabled>Keyingi savol →</button>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-target="home">⌂<span>Bosh sahifa</span></button>
+      <button class="nav-item" data-target="letters">🔤<span>Harflar</span></button>
+      <button class="nav-item" data-target="numbers">🔢<span>Sonlar</span></button>
+      <button class="nav-item" data-target="quiz">🧠<span>Quiz</span></button>
+    </nav>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
